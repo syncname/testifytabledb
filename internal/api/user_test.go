@@ -33,7 +33,7 @@ func CreateRandomUser(t *testing.T) *models.User {
 	u, err := testServer.CreateUser(newUser)
 	assert.NoError(t, err)
 	assert.Equal(t, newUser.Name, u.Name)
-	assert.Equal(t, newUser.Name, u.Name)
+	assert.Equal(t, newUser.Email, u.Email)
 	assert.NotZero(t, u.CreatedAt)
 	return u
 }
